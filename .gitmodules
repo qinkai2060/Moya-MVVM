@@ -1,0 +1,3 @@
+[submodule "Moya-MVVM"]
+	path = Moya-MVVM
+	url = https://github.com/qinkai2060/Moya-MVVM.git
