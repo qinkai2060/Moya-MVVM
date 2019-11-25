@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-
+let baseRequestAPI = MoyaProvider<BaseRequestAPI>()
 enum BaseRequestAPI {
     case GET(map:[String:Any],urlPath:String)
     case POST(map:[String:Any],urlPath:String)

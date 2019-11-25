@@ -8,7 +8,9 @@
 
 import UIKit
 
-class BaseView: UIView ,baseViewModelDelegate{
+class BaseView: UIView {
+
+    
     var BaseViewModel:BaseViewModel?
     init(frame:CGRect ,viewModel:BaseViewModel?) {
         BaseViewModel = viewModel

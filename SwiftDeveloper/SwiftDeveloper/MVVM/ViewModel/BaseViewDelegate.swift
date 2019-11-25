@@ -11,15 +11,19 @@ import Moya
 import RxSwift
 import RxCocoa
 protocol baseViewModelDelegate {
+    associatedtype Input
+    associatedtype Output
+    func transform(input:Input) -> Output
     func hh_setupView ()
     
     func hh_bindView ()
 }
-extension baseViewModelDelegate {
-    func hh_setupView() {
-        
-    }
-    func hh_bindView() {
-        
-    }
-}
+//extension baseViewModelDelegate {
+//    func hh_setupView() {
+//
+//    }
+//    func hh_bindView() {
+//
+//    }
+//}
+

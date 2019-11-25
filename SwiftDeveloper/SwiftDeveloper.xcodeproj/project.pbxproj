@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		8E0D3C82238B9F830074B763 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D3C7A238B9F830074B763 /* Model.swift */; };
 		8E0D3C83238B9F830074B763 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D3C7C238B9F830074B763 /* BaseView.swift */; };
 		8E0D3C84238B9F830074B763 /* BaseRequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0D3C7E238B9F830074B763 /* BaseRequestAPI.swift */; };
+		8EC2A73D238BC02C0010E39B /* Response+ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2A73C238BC02C0010E39B /* Response+ObjectMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8E0D3C7A238B9F830074B763 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8E0D3C7C238B9F830074B763 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		8E0D3C7E238B9F830074B763 /* BaseRequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestAPI.swift; sourceTree = "<group>"; };
+		8EC2A73C238BC02C0010E39B /* Response+ObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+ObjectMapper.swift"; sourceTree = "<group>"; };
 		E79A162F11E3207E816A2FBA /* Pods-SwiftDeveloper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDeveloper.release.xcconfig"; path = "Target Support Files/Pods-SwiftDeveloper/Pods-SwiftDeveloper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,6 @@
 				63D21F0E36E513FA0CE19CB3 /* Pods-SwiftDeveloper.debug.xcconfig */,
 				E79A162F11E3207E816A2FBA /* Pods-SwiftDeveloper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,7 +86,6 @@
 			children = (
 				8E0D3C61238B9F620074B763 /* AppDelegate.swift */,
 				8E0D3C63238B9F620074B763 /* SceneDelegate.swift */,
-				8E0D3C65238B9F620074B763 /* ViewController.swift */,
 				8E0D3C75238B9F830074B763 /* MVVM */,
 				8E0D3C67238B9F620074B763 /* Main.storyboard */,
 				8E0D3C6A238B9F630074B763 /* Assets.xcassets */,
@@ -112,6 +112,7 @@
 			children = (
 				8E0D3C77238B9F830074B763 /* BaseViewModel.swift */,
 				8E0D3C78238B9F830074B763 /* BaseViewDelegate.swift */,
+				8EC2A73C238BC02C0010E39B /* Response+ObjectMapper.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -143,6 +144,7 @@
 		8E0D3C7F238B9F830074B763 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8E0D3C65238B9F620074B763 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -272,6 +274,7 @@
 			files = (
 				8E0D3C66238B9F620074B763 /* ViewController.swift in Sources */,
 				8E0D3C81238B9F830074B763 /* BaseViewDelegate.swift in Sources */,
+				8EC2A73D238BC02C0010E39B /* Response+ObjectMapper.swift in Sources */,
 				8E0D3C80238B9F830074B763 /* BaseViewModel.swift in Sources */,
 				8E0D3C82238B9F830074B763 /* Model.swift in Sources */,
 				8E0D3C83238B9F830074B763 /* BaseView.swift in Sources */,

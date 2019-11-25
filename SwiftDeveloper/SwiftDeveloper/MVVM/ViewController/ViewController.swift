@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+//    var b:BaseView?
+    lazy var base:BaseView =  { 
+        let b = BaseView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), viewModel: nil)
+        
+        return b
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+    
+
 
 
 }

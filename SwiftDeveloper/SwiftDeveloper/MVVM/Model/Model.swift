@@ -7,7 +7,28 @@
 //
 
 import UIKit
+public protocol SectionModelType {
+    associatedtype Item
 
+    var items: [Item] { get }
+
+    init(original: Self, items: [Item])
+}
 class Model: NSObject {
 
+}
+struct ModelSection {
+    
+    var items: [Item]
+}
+
+extension ModelSection: SectionModelType {
+    
+    typealias Item = Model
+    
+    init(original: ModelSection, items: [ModelSection.Item]) {
+        self = original
+        self.items = items
+    
+    }
 }
