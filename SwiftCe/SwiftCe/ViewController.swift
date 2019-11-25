@@ -12,10 +12,18 @@ import RxCocoa
 import Moya
 
 class ViewController: UIViewController {
+    var r :String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        let immutableDict: [String: String] = ["name": "Kirk", "rank": "captain"]
+        let name2: String! = immutableDict["name1"] 
+        print(name2)
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        r = nil
+        print("geile"+(r ?? "hahh"))
+    }
 }
 
 
