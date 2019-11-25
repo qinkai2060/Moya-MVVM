@@ -23,8 +23,15 @@ extension Response{
         guard let json = try? mapJSON() as? [String:Any] else {
             throw MoyaError.jsonMapping(self)
         }
-        guard let jsonArr = (try?mapJSON() ) else {
-            throw MoyaError.jsonMapping(self)
+        for (key,value) in json {
+            guard let array = response as? [Any] else {
+                                    throw MoyaError.jsonMapping(self)
+                                }
+                            guard let dicts = array as? [[String: Any]] else {
+                                         throw MoyaError.jsonMapping(self)
+                                     }
+                        
+                        return Mapper<T>().mapArray(JSONArray: dicts)!
         }
     }
 }
