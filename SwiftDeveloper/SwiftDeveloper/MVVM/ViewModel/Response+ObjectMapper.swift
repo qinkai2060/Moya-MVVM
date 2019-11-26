@@ -18,20 +18,36 @@ extension Response{
         }
         return object
     }
-    
+     
     public func mapArray<T:BaseMappable>(_ type:T.Type) throws -> [T] {
         guard let json = try? mapJSON() as? [String:Any] else {
             throw MoyaError.jsonMapping(self)
         }
-        for (key,value) in json {
-            guard let array = response as? [Any] else {
-                                    throw MoyaError.jsonMapping(self)
-                                }
-                            guard let dicts = array as? [[String: Any]] else {
-                                         throw MoyaError.jsonMapping(self)
-                                     }
-                        
-                        return Mapper<T>().mapArray(JSONArray: dicts)!
+        var arrayM :[Any]?
+        for (_,value) in json {
+            guard let array = value as? [Any] else {
+                throw MoyaError.jsonMapping(self)
+            }
+            guard let dicts = array as? [[String: Any]] else {
+                throw MoyaError.jsonMapping(self)
+            }
+            arrayM = dicts
+            break
+        }
+        return Mapper<T>().mapArray(JSONArray: arrayM as! [[String : Any]])
+    }
+}
+
+extension ObservableType where E == Response {
+    public func mapObject<T:BaseMappable>(_ type:T.Type) -> Observable<T> {
+        return flatMap { (response) -> Observable<T>  in
+            return Observable.just(try response.mapObject(T.self))
+        }
+    }
+    
+    public func mapArray<T:BaseMappable>(_ type:T.Type) -> Observable<[T]>{
+        return flatMap { (response) -> Observable<[T]> in
+            return Observable.just(try response.mapArray(T.self))
         }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 public protocol SectionModelType {
     associatedtype Item
 
@@ -14,7 +15,15 @@ public protocol SectionModelType {
 
     init(original: Self, items: [Item])
 }
-class Model: NSObject {
+class Model: Mappable {
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        
+    }
+    
 
 }
 struct ModelSection {

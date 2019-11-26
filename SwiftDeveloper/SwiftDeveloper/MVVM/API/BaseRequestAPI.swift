@@ -10,17 +10,18 @@ import Foundation
 import Moya
 let baseRequestAPI = MoyaProvider<BaseRequestAPI>()
 enum BaseRequestAPI {
-    case GET(map:[String:Any],urlPath:String)
-    case POST(map:[String:Any],urlPath:String)
+    case GET(map:[String:Any],urlPath:String?)
+    case POST(map:[String:Any],urlPath:String?)
 }
 extension BaseRequestAPI :TargetType {
 
     var path: String {
         switch self {
             case .GET(_, let urlPath):
-            return urlPath
+            
+            return urlPath ?? ""
             case .POST(_,let url):
-            return url
+                return url ?? ""
         }
     }
     

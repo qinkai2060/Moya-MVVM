@@ -17,6 +17,7 @@ protocol baseViewModelDelegate {
     func hh_setupView ()
     
     func hh_bindView ()
+    
 }
 //extension baseViewModelDelegate {
 //    func hh_setupView() {

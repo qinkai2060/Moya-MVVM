@@ -9,7 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+import SVProgressHUD
+import NSObject_Rx
 enum RefreshStatus {
     case none
     case beginHeaderRefresh
@@ -21,10 +22,13 @@ enum RefreshStatus {
 class BaseViewModel: NSObject {
     // 存放着解析完成的模型数组 BehaviorRelay <[数据类型]>
     let dataModel = BehaviorRelay<[Model]>(value: [])
-    let dataModel2 = BehaviorRelay<Model>(value: Model())
     
      var index: Int = 1
-
+     
+    let prams:[String:Any]? = ["":""]
+    
+    let path:String? = ""
+    
 }
 
 extension BaseViewModel:baseViewModelDelegate {
@@ -56,25 +60,30 @@ extension BaseViewModel:baseViewModelDelegate {
         }.asDriver(onErrorJustReturn: [])
         
         let output = BaseOutput(sections: sections)
-        
         output.requestCommond.subscribe(onNext: { [unowned self] isReloadData in
             self.index = isReloadData ? 1 : self.index+1
-            baseRequestAPI.rx.request(.GET(map: ["":""], urlPath: "")).asObservable()
-            
-            
-        }, onError: { (r) in
-            
-        }, onCompleted: {
-            
-        }) {
-            
-        }
+            baseRequestAPI.rx.request(.GET(map: self.prams!, urlPath: self.path!))
+                .asObservable()
+                .mapArray(Model.self).subscribe ({[weak self] (event) in
+                    switch event {
+                    case let .next(modelArr):
+                        self?.dataModel.accept(isReloadData ? modelArr : (self?.dataModel.value ?? []) + modelArr)
+                        SVProgressHUD.showSuccess(withStatus: "加载成功")
+                    case let .error(error):
+                        SVProgressHUD.showSuccess(withStatus:error.localizedDescription)
+                    case .completed:
+                        output.refreshStatus.accept(isReloadData ? .endHeaderRefresh : .endFooterRefresh)
+                    }
+                }).disposed(by: self.rx.disposeBag)
+        }).disposed(by:rx.disposeBag)
         return output
     }
+    
     func hh_bindView() {
         
     }
     func hh_setupView() {
          
     }
+
 }
