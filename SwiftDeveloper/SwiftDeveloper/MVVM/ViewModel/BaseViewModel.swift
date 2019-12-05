@@ -25,22 +25,17 @@ class BaseViewModel: NSObject {
     
      var index: Int = 1
      
-    let prams:[String:Any]? = ["":""]
+    var prams:[String:Any]?
     
-    let path:String? = ""
+    var path:String?
     
 }
 
 extension BaseViewModel:baseViewModelDelegate {
-    typealias Input = BaseInput
+
+    
+    typealias Input = BaseRequestAPI
     typealias Output = BaseOutput
-    struct BaseInput {
-        let requestType:BaseRequestAPI
-        
-        init(requestType:BaseRequestAPI) {
-            self.requestType = requestType
-        }
-    }
     
     struct BaseOutput {
         let sections: Driver<[ModelSection]>
@@ -53,7 +48,7 @@ extension BaseViewModel:baseViewModelDelegate {
             self.sections = sections
         }
     }
-    func transform(input: BaseViewModel.BaseInput) -> BaseViewModel.BaseOutput {
+    func transform(input: BaseRequestAPI) -> BaseViewModel.BaseOutput {
         let sections = dataModel.asObservable().map { (d) -> [ModelSection] in
             
             return [ModelSection(items: d)]
@@ -62,7 +57,7 @@ extension BaseViewModel:baseViewModelDelegate {
         let output = BaseOutput(sections: sections)
         output.requestCommond.subscribe(onNext: { [unowned self] isReloadData in
             self.index = isReloadData ? 1 : self.index+1
-            baseRequestAPI.rx.request(.GET(map: self.prams!, urlPath: self.path!))
+            baseRequestAPI.rx.request(input)
                 .asObservable()
                 .mapArray(Model.self).subscribe ({[weak self] (event) in
                     switch event {

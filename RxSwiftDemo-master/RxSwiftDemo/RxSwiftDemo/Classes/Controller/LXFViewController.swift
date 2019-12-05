@@ -29,6 +29,7 @@ class LXFViewController: UIViewController {
     // 数据源
     let dataSource = RxTableViewSectionedReloadDataSource<LXFSection>(configureCell: { datasource, tableview, IndexPath, item in
         let cell = tableview.dequeueReusableCell(for: IndexPath) as LXFViewCell
+        
         cell.picView.kf.setImage(with: URL(string: item.url))
         cell.descLabel.text = "描述: \(item.desc)"
         cell.sourceLabel.text = "来源: \(item.source)"

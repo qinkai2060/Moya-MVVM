@@ -8,13 +8,8 @@
 
 import UIKit
 import ObjectMapper
-public protocol SectionModelType {
-    associatedtype Item
+import RxDataSources
 
-    var items: [Item] { get }
-
-    init(original: Self, items: [Item])
-}
 class Model: Mappable {
     required init?(map: Map) {
         

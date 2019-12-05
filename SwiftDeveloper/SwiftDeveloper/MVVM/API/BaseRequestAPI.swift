@@ -10,48 +10,45 @@ import Foundation
 import Moya
 let baseRequestAPI = MoyaProvider<BaseRequestAPI>()
 enum BaseRequestAPI {
-    case GET(map:[String:Any],urlPath:String?)
-    case POST(map:[String:Any],urlPath:String?)
+//    case GET(map:[String:Any],urlPath:String)
+//    case POST(map:[String:Any],urlPath:String)
+    case Home(HomeApi)
 }
 extension BaseRequestAPI :TargetType {
-
+    var baseURL: URL {
+        return URL(string: "")!
+    }
+    
+    var sampleData: Data {
+         return Data()
+    }
+    
+    var task: Task {
+        switch self {
+            case .Home(let home):
+            return home.task
+        }
+    }
+    
+    var headers: [String : String]? {
+         return ["":""]
+    }
+    
     var path: String {
         switch self {
-            case .GET(_, let urlPath):
-            
-            return urlPath ?? ""
-            case .POST(_,let url):
-                return url ?? ""
+        case .Home(let home):
+            return home.path
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .GET(_,_):
-            return .get
-        default:
-            return .post
+        case .Home(let home):
+            return home.method
         }
     }
     
-    var sampleData: Data {
-        return Data()
-    }
-    
-    var task: Task {
-        switch self {
-        case .GET(let map,_),.POST(let map,_):
-            return .requestParameters(parameters: map, encoding: JSONEncoding.default)
-        }
-    }
-    
-    var headers: [String : String]? {
-        return ["":""]
-    }
-    
-    var baseURL: URL {
-        return URL(string: "")!
-    }
+
     
 }
 

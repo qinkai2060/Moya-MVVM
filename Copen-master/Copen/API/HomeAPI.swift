@@ -11,22 +11,22 @@ import Moya
 //首页
 
 enum HomeAPI{
-    case home
+    case homeMoudle
     
 }
 
 extension HomeAPI{
     var path:String{
         switch self {
-        case .home:
+        case .homeMoudle:
             return "/module/home.do"
         }
     }
     
     var method:Moya.Method{
         switch self{
-        case .home:
-            return .get
+        case .homeMoudle:
+            return .post
         }
     }
     
