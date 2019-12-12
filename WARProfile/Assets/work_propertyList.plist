@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>记者</string>
+	<string>作家/编剧/撰稿人</string>
+	<string>经纪人/星探</string>
+	<string>造型师</string>
+	<string>化妆师</string>
+	<string>主持人/司仪</string>
+	<string>导演</string>
+	<string>配音员</string>
+	<string>摄影/摄像师</string>
+	<string>翻译</string>
+	<string>教师</string>
+	<string>分析师</string>
+	<string>编辑</string>
+	<string>运营</string>
+	<string>设计</string>
+	<string>工程师</string>
+	<string>法务</string>
+	<string>财务</string>
+	<string>行政</string>
+	<string>人事</string>
+	<string>公关</string>
+	<string>商务</string>
+	<string>客服</string>
+	<string>市场</string>
+	<string>咨询顾问</string>
+	<string>职业经理人</string>
+	<string>投资人</string>
+	<string>创始人</string>
+	<string>高管</string>
+</array>
+</plist>

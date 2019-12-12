@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>埃及</string>
+	<string>俄罗斯</string>
+	<string>新西兰</string>
+	<string>巴西</string>
+	<string>阿根廷</string>
+	<string>古巴</string>
+	<string>捷克</string>
+	<string>芬兰</string>
+	<string>丹麦</string>
+	<string>瑞典</string>
+	<string>瑞士</string>
+	<string>比利时</string>
+	<string>荷兰</string>
+	<string>葡萄牙</string>
+	<string>西班牙</string>
+	<string>意大利</string>
+	<string>英国</string>
+	<string>法国</string>
+	<string>澳大利亚</string>
+	<string>加拿大</string>
+	<string>美国</string>
+	<string>希腊</string>
+	<string>土耳其</string>
+	<string>迪拜</string>
+	<string>尼泊尔</string>
+	<string>越南</string>
+	<string>印度</string>
+	<string>印度尼西亚</string>
+	<string>菲律宾</string>
+	<string>泰国</string>
+	<string>马来西亚</string>
+	<string>新加坡</string>
+	<string>塞班岛</string>
+	<string>长滩岛</string>
+	<string>普吉岛</string>
+	<string>巴厘岛</string>
+	<string>济州岛</string>
+	<string>韩国</string>
+	<string>北海道</string>
+	<string>日本</string>
+	<string>台湾</string>
+	<string>九寨沟</string>
+	<string>张家界</string>
+	<string>鼓浪屿</string>
+	<string>西藏</string>
+	<string>香格里拉</string>
+	<string>大理</string>
+	<string>三亚</string>
+	<string>丽江</string>
+	<string>桂林</string>
+	<string>成都</string>
+</array>
+</plist>

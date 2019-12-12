@@ -1,0 +1,45 @@
+{
+    "weathers": [{"time":0,
+                 "weatherType":2,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 },
+                 {"time":1,
+                 "weatherType":6,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 },
+                 {"time":2,
+                 "weatherType":1,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 },
+                 {"time":3,
+                 "weatherType":10,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"来伊份周年庆全场半价~"
+                 },
+                 {"time":4,
+                 "weatherType":20,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 },
+                 {"time":5,
+                 "weatherType":8,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 },
+                 {"time":6,
+                 "weatherType":15,
+                 "lowestTemp":3,
+                 "highestTemp":9,
+                 "adStr":"上海音乐节开始啦~"
+                 }
+    ]
+}
