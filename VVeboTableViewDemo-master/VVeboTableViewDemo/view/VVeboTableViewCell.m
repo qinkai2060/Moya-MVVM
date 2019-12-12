@@ -33,6 +33,7 @@
     if (self) {
         self.clipsToBounds = YES;
         postBGView = [[UIImageView alloc] initWithFrame:CGRectZero];
+      
         [self.contentView insertSubview:postBGView atIndex:0];
         
         avatarView = [UIButton buttonWithType:UIButtonTypeCustom];//[[VVeboAvatarView alloc] initWithFrame:avatarRect];
@@ -50,7 +51,7 @@
         [self.contentView addSubview:cornerImage];
         
         topLine = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-.5, [UIScreen screenWidth], .5)];
-        topLine.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:1];
+        topLine.backgroundColor = [UIColor redColor];
         topLine.tag = NSIntegerMax;
         [self.contentView addSubview:topLine];
         
@@ -71,7 +72,7 @@
             int width = SIZE_IMAGE;
             float x = SIZE_GAP_LEFT+(g+width)*(i%3);
             float y = i/3*h2;
-            UIImageView *thumb1 = [[UIImageView alloc] initWithFrame:CGRectMake(x, y+2, SIZE_IMAGE, SIZE_IMAGE)];
+            UIImageView *thumb1 = [[UIImageView alloc] initWithFrame:CGRectMake(x, y+2+SIZE_IMAGE, SIZE_IMAGE, SIZE_IMAGE)];
             thumb1.tag = i+1;
             [mulitPhotoScrollView addSubview:thumb1];
         }
@@ -93,7 +94,7 @@
         [avatarView sd_setBackgroundImageWithURL:url forState:UIControlStateNormal placeholderImage:nil options:SDWebImageLowPriority];
     }
 }
-
+// label的坐标
 - (void)addLabel{
     if (label) {
         [label removeFromSuperview];
@@ -127,6 +128,7 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         [[UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1] set];
         CGContextFillRect(context, rect);
+             // 线
         if ([_data valueForKey:@"subData"]) {
             [[UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1] set];
             CGRect subFrame = [_data[@"subData"][@"frame"] CGRectValue];
@@ -206,6 +208,7 @@
                 postBGView.frame = rect;
                 postBGView.image = nil;
                 postBGView.image = temp;
+                 
             }
         });
     });
@@ -230,6 +233,7 @@
 - (void)loadThumb{
     float y = 0;
     NSArray *urls;
+    // 区分有没有转发
     if ([_data valueForKey:@"subData"]) {
         CGRect subPostRect = [_data[@"subData"][@"textRect"] CGRectValue];
         y = subPostRect.origin.y+subPostRect.size.height+SIZE_GAP_BIG;

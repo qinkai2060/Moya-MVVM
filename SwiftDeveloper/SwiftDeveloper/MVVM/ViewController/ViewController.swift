@@ -21,7 +21,11 @@ class ViewController: UIViewController {
 //    var b:BaseView?
     var emptyStr2:[String:String]?
     let viewModel = BaseViewModel()
-     let tableView = UITableView()
+    lazy  var tableView = { () -> UITableView in
+     let b = UITableView()
+     b.register(cellType: LXFViewCell.self)
+    return b
+   }()
     lazy var base:BaseView =  { 
         let b = BaseView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), viewModel: nil)
         
@@ -29,7 +33,7 @@ class ViewController: UIViewController {
     }()
     let dataSource = RxTableViewSectionedReloadDataSource<ModelSection>(configureCell: { datasource, tableview, IndexPath, item in
         let cell = tableview.dequeueReusableCell(for: IndexPath) as LXFViewCell
-        
+
     
 //        cell.picView.kf.setImage(with: URL(string: item.url))
 //        cell.descLabel.text = "描述: \(item.desc)"

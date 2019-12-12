@@ -69,13 +69,13 @@ static inline NSRegularExpression * TopicRegularExpression() {
     NSRange currentRange;
     NSMutableDictionary *highlightColors;
     NSMutableDictionary *framesDict;
-    NSInteger drawFlag;
+//    NSInteger drawFlag;
 }
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        drawFlag = arc4random();
+//        drawFlag = arc4random();
         framesDict = [[NSMutableDictionary alloc] init];
         highlightColors = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                           [UIColor colorWithRed:106/255.0 green:140/255.0 blue:181/255.0 alpha:1],kRegexHighlightViewTypeAccount,
@@ -175,7 +175,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
         [framesDict removeAllObjects];
         currentRange = NSMakeRange(-1, -1);
     }
-    NSInteger flag = drawFlag;
+    NSInteger flag = 0;
     BOOL isHighlight = highlighting;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *temp = text;
@@ -239,7 +239,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
                 CFRelease(framesetter);
                 [[attributedStr mutableString] setString:@""];
                 
-                if (drawFlag==flag) {
+//                if (drawFlag==flag) {
                     if (isHighlight) {
                         if (highlighting) {
                             highlightImageView.image = nil;
@@ -265,7 +265,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
                         }
                     }
 //                    [self debugDraw];//绘制可触摸区域
-                }
+//                }
             });
         }
     });
@@ -300,16 +300,16 @@ static inline NSRegularExpression * TopicRegularExpression() {
         CGFloat lineLeading;
         CTLineGetTypographicBounds((CTLineRef)line, &ascent, &descent, &lineLeading);
         
-        // Adjust pen offset for flush depending on text alignment
+        // 根据文本对齐方式调整刷新的笔偏移量
         CGFloat flushFactor = NSTextAlignmentLeft;
         CGFloat penOffset;
         CGFloat y;
         if (lineIndex == numberOfLines - 1 && truncateLastLine) {
-            // Check if the range of text in the last line reaches the end of the full attributed string
+            // 检查最后一行中的文本范围是否达到完整属性字符串的结尾
             CFRange lastLineRange = CTLineGetStringRange(line);
             
             if (!(lastLineRange.length == 0 && lastLineRange.location == 0) && lastLineRange.location + lastLineRange.length < textRange.location + textRange.length) {
-                // Get correct truncationType and attribute position
+                // 获取正确的截断类型和属性位置
                 CTLineTruncationType truncationType = kCTLineTruncationEnd;
                 CFIndex truncationAttributePosition = lastLineRange.location;
                 
@@ -320,12 +320,12 @@ static inline NSRegularExpression * TopicRegularExpression() {
                 NSAttributedString *attributedTokenString = [[NSAttributedString alloc] initWithString:truncationTokenString attributes:truncationTokenStringAttributes];
                 CTLineRef truncationToken = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)attributedTokenString);
                 
-                // Append truncationToken to the string
-                // because if string isn't too long, CT wont add the truncationToken on it's own
-                // There is no change of a double truncationToken because CT only add the token if it removes characters (and the one we add will go first)
+                //将truncationToken追加到字符串
+                //因为如果字符串不太长，CT不会自己添加truncationToken
+                //不会更改双截断令牌，因为CT仅在删除字符时添加令牌（我们添加的令牌将首先添加）
                 NSMutableAttributedString *truncationString = [[attributedString attributedSubstringFromRange:NSMakeRange((NSUInteger)lastLineRange.location, (NSUInteger)lastLineRange.length)] mutableCopy];
                 if (lastLineRange.length > 0) {
-                    // Remove any newline at the end (we don't want newline space between the text and the truncation token). There can only be one, because the second would be on the next line.
+                    // 删除结尾的任何换行符（我们不希望文本和截断标记之间有换行符）。只能有一个，因为第二个在下一行。
                     unichar lastCharacter = [[truncationString string] characterAtIndex:(NSUInteger)(lastLineRange.length - 1)];
                     if ([[NSCharacterSet newlineCharacterSet] characterIsMember:lastCharacter]) {
                         [truncationString deleteCharactersInRange:NSMakeRange((NSUInteger)(lastLineRange.length - 1), 1)];
@@ -334,7 +334,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
                 [truncationString appendAttributedString:attributedTokenString];
                 CTLineRef truncationLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)truncationString);
                 
-                // Truncate the line in case it is too long.
+                // 如果行太长，请将其截断。
                 CTLineRef truncatedLine = CTLineCreateTruncatedLine(truncationLine, rect.size.width, truncationType, truncationToken);
                 if (!truncatedLine) {
                     // If the line is not as wide as the truncationToken, truncatedLine is NULL
@@ -389,7 +389,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
 }
 
 - (void)clear{
-    drawFlag = arc4random();
+//    drawFlag = arc4random();
     _text = @"";
     labelImageView.image = nil;
     highlightImageView.image = nil;
