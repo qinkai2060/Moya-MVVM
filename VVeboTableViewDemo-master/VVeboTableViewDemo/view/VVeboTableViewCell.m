@@ -256,7 +256,8 @@
                 thumbView.frame = CGRectMake(SIZE_GAP_LEFT+(SIZE_GAP_IMG+SIZE_IMAGE)*i, .5, SIZE_IMAGE, SIZE_IMAGE);
                 thumbView.hidden = NO;
                 NSDictionary *url = urls[i];
-                [thumbView sd_setImageWithURL:[NSURL URLWithString:url[@"thumbnail_pic"]]];
+//                [thumbView sd_setImageWithURL:[NSURL URLWithString:url[@"thumbnail_pic"]]];
+                thumbView.image = [UIImage imageNamed:@"yd_meishi"];
             } else {
                 thumbView.hidden = YES;
             }
