@@ -1,0 +1,19 @@
+//
+//  HFYHQView.h
+//  HeMeiHui
+//
+//  Created by usermac on 2019/6/14.
+//  Copyright © 2019 hefa. All rights reserved.
+//
+
+#import "HFView.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface HFYHQView : HFView
+- (void)showCar;
+- (void)dissMissCar;
+- (void)remove;
+@end
+
+NS_ASSUME_NONNULL_END

@@ -1,0 +1,72 @@
+{"AppData":[
+    {
+        "items":[
+            {
+                "img":"https://img-test1.fybanks.com/user/community/1559297433/an5dr2x5cxz1w04m.jpg!PD750",
+                "link":"https://m.fybanks.com/html/home/#/goods/details?productId=36566&active=1",
+                "goodsId": "199",
+                "describe": "描叙"
+            }
+        ],
+        "isModuleShow":"true",
+        "name":"modules_top_banner"
+    },
+    {
+        "items":[
+            {
+                "img":"https://img-test1.fybanks.com/user/community/1554993393/fnu5lzzzo3lzp569.jpg!PD750",
+                "link":"https://m.fybanks.com/html/home/#/goods/details?productId=36566&active=1",
+                "mainTitle":"盗龄灵芝破壁孢子",
+                "subtitle":"限时限量 一折到底",
+                "goodsId": "199"
+            }
+        ],
+        "isModuleShow":"true",
+        "isModuleTitleShow":"true",
+        "moduleTitle":"拼图标题",
+        "name":"modules_puzzle",
+        "type":"6"
+    },
+    {
+        "items":[
+            {
+                "img":"https://img-test1.fybanks.com/user/community/1554993393/fnu5lzzzo3lzp569.jpg!PD750",
+                "mainTitle":"模块标题",
+            }
+        ],
+        "isModuleShow":"true",
+        "moduleTitle":"视频入口",
+        "name":"modules_video",
+    },
+    {
+        "items":[
+            {
+                "mainTitle":"服装",
+                "id": "1"
+            },
+            {
+                "mainTitle":"居家",
+                "id": "2"
+            }
+        ],
+        "isModuleShow":"true",
+        "isModuleTitleShow":"true",
+        "moduleTitle":"商品列表",
+        "name":"modules_classify",
+    },
+    {
+        "items":[
+            {
+                "mainTitle":"热水壶"
+            },
+            {
+                "mainTitle":"电瓶车"
+            }
+        ],
+        "isModuleShow":"true",
+        "isModuleTitleShow":"true",
+        "moduleTitle":"热词",
+        "name":"modules_hotkey",
+    }
+]
+}

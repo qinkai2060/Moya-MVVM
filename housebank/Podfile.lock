@@ -1,0 +1,235 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AliyunPlayer_iOS/AliyunPlayerSDK (3.4.10)
+  - AliyunPlayer_iOS/AliyunVodPlayerSDK (3.4.10):
+    - AliyunPlayer_iOS/AliyunPlayerSDK
+  - AMap2DMap (5.6.1):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.5.7)
+  - AMapLocation (2.6.3):
+    - AMapFoundation (~> 1.4)
+  - BeeCloud/Core (3.6.4)
+  - BeeCloud/UnionPay (3.6.4):
+    - BeeCloud/Core
+  - Bugly (2.5.0)
+  - CDDPagerController (1.1.5)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - HHTransition (2.0.0)
+  - IQKeyboardManager (6.5.3)
+  - JKCountDownButton (1.3.0)
+  - JXCategoryView (1.3.14)
+  - lottie-ios (2.5.3)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.17)
+  - MJRefresh (3.2.0)
+  - mob_sharesdk (4.2.6):
+    - mob_sharesdk/ShareSDK (= 4.2.6)
+    - MOBFoundation
+  - mob_sharesdk/ShareSDK (4.2.6):
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKExtension (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/QQ (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - mob_sharesdk/ShareSDKUI (4.2.6):
+    - mob_sharesdk/ShareSDK
+    - MOBFoundation
+  - MOBFoundation (3.2.6)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.2)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - pop (1.0.12)
+  - Reachability (3.2)
+  - ReactiveObjC (3.1.1)
+  - Realm (3.20.0):
+    - Realm/Headers (= 3.20.0)
+  - Realm/Headers (3.20.0)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.0.0):
+    - SDWebImage/Core (= 5.0.0)
+  - SDWebImage/Core (5.0.0)
+  - Texture (2.6):
+    - Texture/PINRemoteImage (= 2.6)
+  - Texture/Core (2.6)
+  - Texture/PINRemoteImage (2.6):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - TZImagePickerController (3.2.6)
+  - VerifyCode (3.0.1)
+  - VTMagic (1.2.4):
+    - VTMagic/Core (= 1.2.4)
+  - VTMagic/Core (1.2.4)
+  - WebViewJavascriptBridge (6.0.3)
+  - YTKNetwork (2.0.4):
+    - AFNetworking (~> 3.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZFPlayer (3.2.14):
+    - ZFPlayer/Core (= 3.2.14)
+  - ZFPlayer/AVPlayer (3.2.14):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (3.2.14)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AliyunPlayer_iOS/AliyunVodPlayerSDK
+  - AMap2DMap
+  - AMapLocation
+  - BeeCloud/UnionPay
+  - Bugly
+  - CDDPagerController
+  - FMDB
+  - HHTransition
+  - IQKeyboardManager
+  - JKCountDownButton
+  - JXCategoryView (= 1.3.14)
+  - lottie-ios
+  - Masonry
+  - MBProgressHUD
+  - MJExtension (~> 3.0.10)
+  - MJRefresh
+  - mob_sharesdk (= 4.2.6)
+  - mob_sharesdk/ShareSDKExtension
+  - mob_sharesdk/ShareSDKPlatforms/QQ
+  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
+  - mob_sharesdk/ShareSDKPlatforms/WeChat
+  - mob_sharesdk/ShareSDKUI
+  - MOBFoundation
+  - pop
+  - Reachability (>= 3.2)
+  - ReactiveObjC
+  - Realm
+  - SDCycleScrollView (>= 1.80)
+  - SDWebImage (= 5.0)
+  - Texture
+  - TZImagePickerController
+  - VerifyCode (= 3.0.1)
+  - VTMagic
+  - WebViewJavascriptBridge
+  - YTKNetwork
+  - YYKit
+  - ZFPlayer
+  - ZFPlayer/AVPlayer
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AliyunPlayer_iOS
+    - AMap2DMap
+    - AMapFoundation
+    - AMapLocation
+    - BeeCloud
+    - Bugly
+    - CDDPagerController
+    - FMDB
+    - HHTransition
+    - IQKeyboardManager
+    - JKCountDownButton
+    - JXCategoryView
+    - lottie-ios
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - mob_sharesdk
+    - MOBFoundation
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - pop
+    - Reachability
+    - ReactiveObjC
+    - Realm
+    - SDCycleScrollView
+    - SDWebImage
+    - Texture
+    - TZImagePickerController
+    - VerifyCode
+    - VTMagic
+    - WebViewJavascriptBridge
+    - YTKNetwork
+    - YYKit
+    - ZFPlayer
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AliyunPlayer_iOS: 759820a9348ac0d1aff853034216a89ff4f843b2
+  AMap2DMap: cac76bc057de18a1641f34df6b50bf5bc6b23571
+  AMapFoundation: 216d58448c80356434ac4332250a8fdb2f5c4d1e
+  AMapLocation: dc2c4fde95d72087d73934338160fadc72104bb7
+  BeeCloud: 484866b80bc157d7aad53caaeb4dc2d3abd40af0
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  CDDPagerController: ed05951429a860c56cfdffbeba1a8af5132a28ae
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  HHTransition: d55d46fc6e1059a5202417e52722d3f9114ee57b
+  IQKeyboardManager: c2f901164d56807a35788483584d09fa69192e8e
+  JKCountDownButton: 3b557e75d23e7243bb63c8130e6d12d8510468dd
+  JXCategoryView: 008a9d2eb3ba6035eb2df9a2b3e9a4806d6601a3
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  mob_sharesdk: e993f357a6f1581a956aea16ea142c9de0425bf7
+  MOBFoundation: 08c456357888e4c984fba23bbf04cfd2f4fc1e02
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
+  TZImagePickerController: 3900e8d68428ff3a88817efce82ae9e7d9ffebc9
+  VerifyCode: 27f855fd71ebd567521c8d052bd7e8d76a151e4c
+  VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZFPlayer: 5897086d2716f1d7dff472eb120851e9df7ddf7d
+
+PODFILE CHECKSUM: 33d64ba9e5ed78883795b164f50e3042d384281e
+
+COCOAPODS: 1.8.4
